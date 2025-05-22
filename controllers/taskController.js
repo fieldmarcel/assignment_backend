@@ -22,6 +22,8 @@ const createTask = (req, res) => {
         id: id++,
         title: req.body.title,
         description: req.body.description,
+    completed: req.body.completed === undefined ? false : req.body.completed 
+
     };
     data.push(newTask);
     console.log("Task created:", newTask);
@@ -37,6 +39,7 @@ const updateTask = (req, res) => {
     }
     task.title = req.body.title;
     task.description = req.body.description;
+    task.completed = req.body.completed === undefined ? task.completed : req.body.completed;
     console.log("Task updated:", task);
     res.status(200).json({ message: "Task updated successfully", task });
 };
