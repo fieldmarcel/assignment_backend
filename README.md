@@ -58,11 +58,13 @@ res {
 now token is written at the requisite site.... Authorization: Bearer <token>
 
 now POST /tasks
+
 {
   "title": "Second Task",
   "description": "This is the second task",
   "completed": true
 }
+
 {
     "id": 2,
     "title": "Second Task",
@@ -71,21 +73,26 @@ now POST /tasks
   }
  now GET /tasks
 [
+
   {
     "id": 1,
     "title": "First Task",
     "description": "This is the first task",
     "completed": false
   },
+  
   {
     "id": 2,
     "title": "Second Task",
     "description": "This is the second task",
     "completed": true
   }
+  
 ]
 GET /tasks/1
+
 {
+
   "id": 1,
   "title": "First Task",
   "description": "This is the first task",
@@ -97,6 +104,7 @@ if not found
   "message": "Task not found"
 }
 
+
 PUT /tasks/1
 
 {
@@ -105,6 +113,7 @@ PUT /tasks/1
   "completed": true
 }
 res
+
 {
   "id": 1,
   "title": "Updated Task",
@@ -112,7 +121,9 @@ res
   "completed": true
 }
 if not found 
+
 {
+
   "message": "Task not found"
 }
 DELETE /tasks/1
