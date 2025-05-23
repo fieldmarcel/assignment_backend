@@ -56,8 +56,7 @@ const deleteTask = (req, res) => {
     res.status(200).json({ message: "Task deleted successfully", task: deleted[0] });
 };
 
-const taskController = {
-    getAllTasks,
+const taskController = {getAllTasks,
     getTaskbyId,
     createTask,
     updateTask,
